@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/admin.css" type="text/css">
+    
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+            font-size: 16px;
+        }
+        .container1 {
+            font-family: Arial;
+            font-size: 16px;
+            max-width: 1200px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+        .form-actions {
+            text-align: center;
+        }
+        .form-actions button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-actions button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+       <!-- Header Section Begin -->
+       <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="./admin.html">Tổng quan </a></li>
+                            <li class="active"><a href="./Qltk.html">Quản lý tài khoản</a></li>
+                            <li><a href="./Qlsp.html">Quản lý sản phẩm</a></li>
+                            <li><a href="./Qldh.html">Quản lý đơn hàng</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__right">
+                        <div class="header__right__auth">
+                            <ul class="header__right__widget">
+                                <li class="search-container">
+                                    <form action="ketquatimkiemad.html" method="GET">
+                                        <input type="text" class="search-input" placeholder="Nhập tên sản phẩm">
+                                        <button type="submit" class="search-button">
+                                            <span class="icon_search"></span>
+                                        </button>
+                                    </form>
+                                </li>
+                                <li class="dropdown">
+                                    <div>
+                                        <a href="#" class="user-link"><img src="img/user-profile.png"
+                                                width="45px"></img></a>
+                                        <div class="dropdown-menu">
+                                            <hr style="border: 1px dashed gray;">
+                                            <a class="action-button-link" style="text-decoration: none"
+                                                href="dangnhapad.html">Đăng Nhập</a>
+                                            <a class="action-button-link" style="text-decoration: none"
+                                                href="dangnhapad.html">Đăng kí</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+    <div class="container1">
+        <h2  style="text-align: center;">Thêm người dùng</h2>
+        <form onsubmit="redirectToQltk(event)"method="POST">
+            <div class="form-group" >
+                <label for="stt">Tên đăng nhập</label>
+                <input style="border-radius: 3px;border-width: 1px;border-color: #ddd;" type="text" id="stt" name="stt" placeholder="Nhập tên tài khoản" >
+            </div>
+            <div class="form-group">
+                <label for="name">Họ và tên</label>
+                <input style="border-radius: 3px;border-width: 1px;border-color: #ddd;" type="text" id="name" name="name" placeholder="Nhập họ tên" >
+            </div>
+            <div class="form-group">
+                <label for="phone">SĐT</label>
+                <input style="border-radius: 3px;border-width: 1px;border-color: #ddd;" type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" >
+            </div>
+            <div class="form-group" >
+                <label for="role">Vai trò</label>
+                <select id="role" name="role" >
+                    <option value="">Chọn vai trò</option>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Nhập email" >
+            </div>
+            <div class="form-group">
+                <label for="matkhau">Mật khẩu</label>
+                <input type="matkhau" id="matkhau" name="matkhau" placeholder="Nhập mật khẩu" >
+            </div>
+            <div class="form-group">
+                <label for="diachi">Địa chỉ</label>
+                <input type="diachi" id="diachi" name="diachi" placeholder="Nhập địa chỉ" >
+            </div>
+            <div class="form-actions">
+                <button type="submit" onclick="filterData()" >Thêm người dùng</button>
+            </div>
+        </form>
+    </div>
+    <!-- Footer Section Begin -->
+    <footer class="footer" style="width: 100%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-7">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <p>Trang web bán giày chuyên cung cấp các mẫu giày thời trang, đa dạng từ thể thao đến công sở. Sản phẩm đảm bảo chất lượng cao, với nhiều lựa chọn về kiểu dáng và kích cỡ phù hợp cho mọi lứa tuổi.</p>
+                        <div class="footer__payment">
+                            <a href="#"><img src="img/payment/payment-1.png" alt=""></a>
+                            <a href="#"><img src="img/payment/payment-2.png" alt=""></a>
+                            <a href="#"><img src="img/payment/payment-3.png" alt=""></a>
+                            <a href="#"><img src="img/payment/payment-4.png" alt=""></a>
+                            <a href="#"><img src="img/payment/payment-5.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-5">
+                    <div class="footer__widget">
+                        <h6>Đường dẫn</h6>
+                        <ul>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Thông tin liên lạc</a></li>
+                            <li><a href="#">Hỏi đáp cùng Ashion</a></li>
+                            <li><a href="#">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footer__widget">
+                        <h6>Tài khoản</h6>
+                        <ul>
+                            <li><a href="#">Tài khoản của tôi</a></li>
+                            <li><a href="#">Theo dõi đơn hàng</a></li>
+                            <li><a href="#">Thanh toán</a></li>
+                            <li><a href="#">Danh sách yêu thích</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-8">
+                    <div class="footer__newslatter">
+                        <h6>Tạp chí Ashion</h6>
+                        <form action="#">
+                            <input type="text" placeholder="Email">
+                            <button type="submit" class="site-btn">Theo dõi</button>
+                        </form>
+                        <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    <div class="footer__copyright__text">
+                        <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                    </div>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    <script>
+        function redirectToQltk(event) {
+            event.preventDefault(); // Prevent form submission
+            // Perform any necessary actions here (e.g., save data)
+            window.location.href = 'Qltk.html'; // Redirect to admin page
+        }
+    </script>
+    <script>
+        function filterData() {
+            alert("Đã thêm thành công");
+        }
+    </script>
+</body>
+</html>

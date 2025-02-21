@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ashion Template">
+    <meta name="keywords" content="Ashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ashion with Fashion</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!-- <style> 
+    body { 
+        font-family: Arial, sans-serif; 
+    } 
+     table { 
+        width: 100%; 
+        border-collapse: collapse; 
+    } 
+    th, td { 
+        border: 1px solid #ddd; 
+        padding: 8px; 
+        text-align: center; 
+    } 
+    th { 
+        background-color: #f2f2f2; 
+    } 
+    tr:nth-child(even) { 
+        background-color: #f9f9f9; 
+    } 
+    tr:hover { 
+        background-color: #ddd;  
+    } 
+    .details-button { 
+        background-color: #007bff; 
+        color: white; 
+        border: none; 
+        padding: 5px 10px; 
+        text-decoration: none; 
+        cursor: pointer; 
+    }
+    </style> -->
+    <style>
+        /* Table styling */
+        table {
+            width: 100%;
+            text-align: center;
+            table-layout: fixed;
+            /* Ensures columns have equal width */
+        }
+
+        table th,table td {
+            vertical-align: middle;
+            /* Center-align vertically */
+            border: 2px solid black;
+            width: 30px;
+            height: 60px;
+            padding: 1em;
+        };
+
+        table th {
+            font-weight: bold;
+        }
+
+        table p {
+            margin: 0;
+            /* Remove default paragraph margin */
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="./admin.html">Tổng quan </a></li>
+                            <li><a href="./Qltk.html">Quản lý tài khoản</a></li>
+                            <li><a href="./Qlsp.html">Quản lý sản phẩm</a></li>
+                            <li><a href="./Qldh.html">Quản lý đơn hàng</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__right">
+                        <div class="header__right__auth">
+                            <ul class="header__right__widget">
+                                <li class="search-container">
+                                    <form action="ketquatimkiemad.html" method="GET">
+                                        <input type="text" class="search-input" placeholder="Nhập tên sản phẩm">
+                                        <button type="submit" class="search-button">
+                                            <span class="icon_search"></span>
+                                        </button>
+                                    </form>
+                                </li>
+                                <li class="dropdown">
+                                    <div>
+                                        <a href="#" class="user-link"><img src="img/user-profile.png"
+                                                width="45px"></img></a>
+
+                                        <div class="dropdown-menu">
+                                            <strong>Tài khoản: <span>Mãi Bên Em</span></strong>
+                                            <a class="action-button-link" style="text-decoration: none"
+                                                href="admin.html">Đổi Mật Khẩu</a>
+                                            <a class="action-button-link" style="text-decoration: none"
+                                                href="addmin.html">Đăng Xuất</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas__open">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+    </header>
+    <!-- Header Section End -->
+    <!-- Main Dashboard Content Begin -->
+    <main class="dashboard-content">
+        <div class="container-fluid">
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <h2 class="text-center mb-4">Danh sách đơn hàng </h2>
+                </div>
+            </div>
+            <table>
+                <thead> 
+                    <tr> 
+                        <th>STT</th> 
+                        <th>Mã đơn hàng</th> 
+                        <th>Người đặt</th> 
+                        <th>SDT</th> 
+                        <th>Ngày đặt</th> 
+                        <th>Tình trạng</th> 
+                        <th>Địa chỉ</th> 
+                        <th>Số lượng</th> 
+                        <th>Ghi chú</th> 
+                        <th>Chi tiết</th> 
+                    </tr> 
+                </thead> 
+                <tbody> 
+                    <tr> 
+                        <td>1</td> 
+                        <td>DH001</td> 
+                        <td>Nguyễn Văn A</td> 
+                        <td>0123456789</td> 
+                        <td>2024-11-01</td> 
+                        <td>Chưa xử lý</td> 
+                        <td>Hà Nội</td> 
+                        <td>3 đôi</td> 
+                        <td>Giao hàng trước 12h</td> 
+                        <td><a href="order-detail.html" class="btn btn-primary btn-sm">Xem chi tiết</a></td> 
+                    </tr> 
+                    <tr> 
+                        <td>2</td> 
+                        <td>DH002</td> 
+                        <td>Trần Thị B</td> 
+                        <td>0987654321</td> 
+                        <td>2024-11-02</td> 
+                        <td>Đã hủy</td> 
+                        <td>TP. Hồ Chí Minh</td> 
+                        <td>2 đôi</td> 
+                        <td>Kiểm tra kỹ sản phẩm</td> 
+                        <td><a href="order-detail.html" class="btn btn-primary btn-sm">Xem chi tiết</a></td> 
+                    </tr> 
+                    <tr> 
+                        <td>3</td> 
+                        <td>DH003</td> 
+                        <td>Lê Thị D</td> 
+                        <td>0123456780</td> 
+                        <td>2024-11-12</td> 
+                        <td>Đã giao thành công</td> 
+                        <td>TP. Hồ Chí Minh</td>
+                        <td>3 đôi</td> 
+                        <td>Không ghi chú</td> 
+                        <td><a href="order-detail.html" class="btn btn-primary btn-sm">Xem chi tiết</a></td>
+                    </tr> 
+                </tbody>
+            </table>
+            <div class="container-fluid">
+                
+                <!-- Footer Section Begin -->
+                <footer class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-7">
+                                <div class="footer__about">
+                                    <div class="footer__logo">
+                                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                                    </div>
+                                    <p>Trang web bán giày chuyên cung cấp các mẫu giày thời trang, đa dạng từ thể thao đến công sở. Sản phẩm đảm bảo chất lượng cao, với nhiều lựa chọn về kiểu dáng và kích cỡ phù hợp cho mọi lứa tuổi.</p>
+                                    <div class="footer__payment">
+                                        <a href="#"><img src="img/payment/payment-1.png" alt=""></a>
+                                        <a href="#"><img src="img/payment/payment-2.png" alt=""></a>
+                                        <a href="#"><img src="img/payment/payment-3.png" alt=""></a>
+                                        <a href="#"><img src="img/payment/payment-4.png" alt=""></a>
+                                        <a href="#"><img src="img/payment/payment-5.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-5">
+                                <div class="footer__widget">
+                                    <h6>Đường dẫn</h6>
+                                    <ul>
+                                        <li><a href="#">Về chúng tôi</a></li>
+                                        <li><a href="#">Thông tin liên lạc</a></li>
+                                        <li><a href="#">Hỏi đáp cùng Ashion</a></li>
+                                        <li><a href="#">Blogs</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4">
+                                <div class="footer__widget">
+                                    <h6>Tài khoản</h6>
+                                    <ul>
+                                        <li><a href="#">Tài khoản của tôi</a></li>
+                                        <li><a href="#">Theo dõi đơn hàng</a></li>
+                                        <li><a href="#">Thanh toán</a></li>
+                                        <li><a href="#">Danh sách yêu thích</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-8 col-sm-8">
+                                <div class="footer__newslatter">
+                                    <h6>Tạp chí Ashion</h6>
+                                    <form action="#">
+                                        <input type="text" placeholder="Email">
+                                        <button type="submit" class="site-btn">Theo dõi</button>
+                                    </form>
+                                    <div class="footer__social">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                <div class="footer__copyright__text">
+                                    <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                                </div>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- Footer Section End -->
+
+                <!-- Search Begin -->
+                <div class="search-model">
+                    <div class="h-100 d-flex align-items-center justify-content-center">
+                        <div class="search-close-switch">+</div>
+                        <form class="search-model-form">
+                            <input type="text" id="search-input" placeholder="Search here.....">
+                        </form>
+                    </div>
+                </div>
+                <!-- Search End -->
+
+                <!-- Js Plugins -->
+                <script src="js/jquery-3.3.1.min.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+                <script src="js/jquery.magnific-popup.min.js"></script>
+                <script src="js/jquery-ui.min.js"></script>
+                <script src="js/mixitup.min.js"></script>
+                <script src="js/jquery.countdown.min.js"></script>
+                <script src="js/jquery.slicknav.js"></script>
+                <script src="js/owl.carousel.min.js"></script>
+                <script src="js/jquery.nicescroll.min.js"></script>
+                <script src="js/main.js"></script>
+</body>
+</html>

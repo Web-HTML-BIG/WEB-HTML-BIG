@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Product</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Delete.css"> 
+</head>
+<body>
+    <div class="container">
+        <h2>Xóa sản phẩm</h2>
+        <p>Bạn có chắc chắn muốn xóa sản phẩm này?</p>
+        <div class="button-group">
+            <button class="confirm-btn" onclick="confirmDelete()">Xác nhận xóa</button>
+            <button class="cancel-btn" onclick="window.location.href='Qlsp.html'">Hủy bỏ</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    function confirmDelete() {
+        alert("Sản phẩm đã được xóa thành công!"); // Thông báo giả lập
+        window.location.href = "Qlsp.html"; // Trở về trang chính
+    }
+</script>
+</html>

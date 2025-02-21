@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ashion Template">
+    <meta name="keywords" content="Ashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ashion with Fashion</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/Qlsp.css" type="text/css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 40%;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        form input,
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        form textarea {
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .image-preview {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .image-preview img {
+            max-width: 70%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        /*check box
+        .checkbox-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 10px;
+    background: #f5f5f5;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.checkbox-container label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.checkbox-container label:hover {
+    background: #e9ecef;
+    border-color: #007bff;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: -2px;
+    margin-bottom: -1px;
+    accent-color: #007bff;
+    
+}
+.checkbox-container input[type="checkbox"]:checked + label {
+    background: #007bff;
+    color: #fff;
+    border-color: #0056b3;
+    font-weight: bold;
+}
+        check box*/
+        /*dropdown*/
+        /* Nút dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%; 
+}
+
+.dropdown-toggle {
+    width: 100%; 
+    padding: 10px;
+    background-color: #929292;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dropdown-toggle:hover {
+    background-color: #9b9b9b;
+}
+
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0; 
+    z-index: 1;
+    background-color: white;
+    width: 30%; 
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: visible; 
+    max-height: none; 
+}
+
+.dropdown-menu label {
+    display: flex; 
+    align-items:center;
+    
+    margin-right: 0%;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.dropdown-menu input[type="checkbox"] {
+    margin-bottom: 3px; 
+    accent-color: #007bff; 
+}
+
+
+                /*dropdown*/
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Thêm sản phẩm</h2>
+        <form onsubmit="redirectToAdmin(event)">
+            <label for="name">Tên sản phẩm:</label>
+            <input type="text" id="name" name="name" >
+
+            <label for="category">Loại sản phẩm:</label>
+            <select id="category" name="category" >
+                <option>Nike</option>
+                <option selected>Adidas</option>
+                <option>Jordan</option>
+            </select>
+<!--
+            <label>Kích thước:</label>
+            <div class="checkbox-container">
+            <label>
+            <input type="checkbox" name="size" value="37" onchange="updatePrice()"> 37
+        </label>
+        <label>
+        <input type="checkbox" name="size" value="38" onchange="updatePrice()"> 38
+        </label>
+        <label>
+        <input type="checkbox" name="size" value="39" onchange="updatePrice()"> 39
+        </label>
+        <label>
+        <input type="checkbox" name="size" value="40" onchange="updatePrice()"> 40
+        </label>
+        <label>
+        <input type="checkbox" name="size" value="41" onchange="updatePrice()"> 41
+        </label>
+        <label>
+        <input type="checkbox" name="size" value="42" onchange="updatePrice()"> 42
+        </label>
+        <label>
+        <input type="checkbox" name="size" value="43" onchange="updatePrice()"> 43
+        </label>
+        <label>
+        <input type="checkbox" name="size" value="44" onchange="updatePrice()"> 44
+        </label>
+        <label>
+        <input type="checkbox" name="size" value="45" onchange="updatePrice()"> 45
+        </label>
+        </div>
+    -->
+    <label>Kích thước:</label>
+    <div class="dropdown">
+        <button type="button" class="dropdown-toggle" onclick="toggleDropdown()">Chọn kích thước</button>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <label>
+                <input type="checkbox" name="size" value="37"> 37
+            </label>
+            <label>
+                <input type="checkbox" name="size" value="38"> 38
+            </label>
+            <label>
+                <input type="checkbox" name="size" value="39"> 39
+            </label>
+            <label>
+                <input type="checkbox" name="size" value="40"> 40
+            </label>
+            <label>
+                <input type="checkbox" name="size" value="41"> 41
+            </label>
+            <label>
+                <input type="checkbox" name="size" value="42"> 42
+            </label>
+            <label>
+                <input type="checkbox" name="size" value="43"> 43
+            </label>
+            <label>
+                <input type="checkbox" name="size" value="44"> 44
+            </label>
+            <label>
+                <input type="checkbox" name="size" value="45"> 45
+            </label>
+        </div>
+    </div>
+    
+            <label for="price">Giá niêm yết của sản phẩm:</label>
+            <input type="number" id="price" name="price"  >
+
+            <label for="price">Giá sản phẩm sau giảm giá:</label>
+            <input type="number" id="price" name="price"   >
+
+            <label for="role">Trạng thái</label>
+                <select id="role" name="role" >
+                    <option value="admin">Còn hàng</option>
+                    <option value="user">Hết hàng</option>
+                </select>
+            
+    
+           
+            <lable style="padding-left: 3px ;">Ảnh 1</lable>
+                <input style="border-width: 0;padding-top: 24px;padding-left: 0%;" type="file"  accept="image/*">
+            <lable style="padding-left: 3px ;">Ảnh 2</lable>
+                <input style="border-width: 0;padding-top: 24px;padding-left: 0%;" type="file"  accept="image/*">
+            <lable style="padding-left: 3px ;">Ảnh 3</lable>
+                <input style="border-width: 0;padding-top: 24px;padding-left: 0%;" type="file"  accept="image/*">
+
+            
+            <br>
+
+            <label for="description">Mô tả:</label>
+            <textarea id="description" name="description"
+                rows="4"></textarea>
+            <label for="description">Chi tiết sản phẩm:</label>
+            <textarea id="description" name="description"
+                rows="4"></textarea>
+            <label for="description">Thông tin chi tiết:</label>
+            <textarea id="description" name="description"
+                rows="10"></textarea>
+
+            <button type="submit">Thêm sản phẩm</button>
+        </form>
+    </div>
+
+    
+</body>
+
+</html>
+<style>
+    input#file-upload-button{
+        background: #007bff;
+        height: 100px;
+    }
+</style>
+
+<script>
+    function redirectToAdmin(event) {
+        event.preventDefault(); // Prevent form submission
+        // Perform any necessary actions here (e.g., save data)
+        window.location.href = 'Qlsp.html'; // Redirect to admin page
+        alert("Đã thêm sản phẩm.");
+        }
+</script>

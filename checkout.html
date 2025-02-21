@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ashion Template">
+    <meta name="keywords" content="Ashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ashion with Fashion</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/test1.css" type="text/css">
+
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+        <ul class="offcanvas__widget">
+            <li><span class="icon_search search-switch"></span></li>
+        </ul>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+            <a href="#">Đăng Nhập</a>
+            <a href="#">Đăng Kí</a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="./index_logged_in.html">Trang chủ</a></li>
+                            <li><a href="./sanpham_nike_logged_in.html">Nike</a></li>
+                            <li><a href="./sanpham_adidas_logged_in.html">Adidas</a></li>
+                            <li><a href="./sanpham_jordan_logged_in.html">Jordan</a></li>
+                            <li class="active"><a href="./checkout.html">Giỏ hàng</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__right">
+                        <div class="header__right__auth">
+                            <ul class="header__right__widget">
+                                <li class="search-container">
+                                    <form action="ketquatimkiem_logged_in.html" method="GET">
+                                        <input type="text" class="search-input" placeholder="Nhập tên sản phẩm">
+                                        <button type="submit" class="search-button">
+                                            <a><span class="icon_search"></span> </a>
+                                        </button>
+                                    </form>
+                                </li>
+                                <li class="dropdown">
+                                    <div>
+                                        <a href="#" class="user-link"><img src="img/user-profile.png" width="45px"></img></a>        
+                                        <div class="dropdown-menu" >
+                                            <strong>Tài khoản: <span>Mãi bên em</span></strong>
+                                            <a class="action-button-link" style="text-decoration: none" href="lichsudonhang.html">Lịch sử mua hàng</a>
+                                            <a class="action-button-link" style="text-decoration: none" href="chinhsuatt.html">Đổi mật khẩu</a>
+                                            <a class="action-button-link" style="text-decoration: none" href="index.html">Đăng Xuất</a>                                    
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+
+                </div>
+        
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="./index_logged_in.html"><i class="fa fa-home"></i> Trang chủ</a>
+                        <span>Giỏ hàng</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+    <!--123-->
+    
+    <div class="cart-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Sản Phẩm</th>
+                    <th>Thong tin Sản Phẩm</th>
+                    <th>Giá</th>
+                    <th>Size</th>
+                    <th>Số Lượng</th>
+                    <th>Tổng(Tạm tính )</th>
+                    <th>Chỉnh sửa đơn hàng</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="product__item__pic1 set-bg" data-setbg="img/shop/shop-5.jpg"></div>
+                    </td>
+                    <td>Giày Nike</td>
+                    <td>2,000,000 VNĐ</td>
+                    <td>
+                        <input type="number" value="36" min="36"  max="43" class="quantity-input">
+                    </td>
+                    <td>
+                        <input type="number" value="1" min="1" class="quantity-input">
+                    </td>
+                    <td>2,000,000 VNĐ</td>
+                    <td> 
+                        <button onclick="Xoa()" class=".notification">Xóa</button>
+                        <script>function Xoa(){alert("Đã xóa sản phẩm")}</script>
+                    </td>
+                </tr>
+                
+               
+                <tr>
+                    <td>
+                        <div class="product__item__pic1 set-bg" data-setbg="img/shop/shop-2.jpg"></div>
+                    </td>
+                    <td>Giày Nike</td>
+                    <td>2,000,000 VNĐ</td>
+                    <td>
+                        <input type="number" value="36" min="36"  max="43" class="quantity-input">
+                    </td>
+                    <td>
+                        <input type="number" value="1" min="1" class="quantity-input">
+                    </td>
+                    <td>2,000,000 VNĐ</td>
+                    <td> 
+                        <button onclick="Xoa()" class=".notification">Xóa</button>
+                        <script>function Xoa(){alert("Đã xóa sản phẩm")}</script>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="product__item__pic1 set-bg" data-setbg="img/shop/shop-7.jpg"></div>
+                    </td>
+                    <td>Giày Nike</td>
+                    <td>2,000,000 VNĐ</td>
+                    <td>
+                        <input type="number" value="36" min="36"  max="43" class="quantity-input">
+                    </td>
+                    <td>
+                        <input type="number" value="1" min="1" class="quantity-input">
+                    </td>
+                    <td>2,000,000 VNĐ</td>
+                    <td> 
+                        <button onclick="Xoa()" class=".notification">Xóa</button>
+                        <script>function Xoa(){alert("Đã xóa sản phẩm")}</script>
+                    </td>             
+                <tr>
+                    <td>
+                        <div class="product__item__pic1 set-bg" data-setbg="img/shop/shop-9.jpg"></div>
+                    </td>
+                    <td>Giày Nike</td>
+                    <td>2,000,000 VNĐ</td>
+                    <td>
+                        <input type="number" value="36" min="36"  max="43" class="quantity-input">
+                    </td>
+                    <td>
+                        <input type="number" value="1" min="1" class="quantity-input">
+                    </td>
+                    <td>2,000,000 VNĐ</td>
+                    <td> 
+                        <button onclick="Xoa()" class=".notification">Xóa</button>
+                        <script>function Xoa(){alert("Đã xóa sản phẩm")}</script>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="product__item__pic1 set-bg" data-setbg="img/shop/shop-7.jpg"></div>
+                    </td>
+                    <td>Giày Nike</td>
+                    <td>2,000,000 VNĐ</td>
+                    <td>
+                        <input type="number" value="36" min="36"  max="43" class="quantity-input">
+                    </td>
+                    <td>
+                        <input type="number" value="1" min="1" class="quantity-input">
+                    </td>
+                    <td>2,000,000 VNĐ</td>
+                    <td> 
+                        <button onclick="Xoa()" class=".notification">Xóa</button>
+                        <script>function Xoa(){alert("Đã xóa sản phẩm")}</script>
+                    </td>
+                </tr>
+               
+            </tbody>
+        </table>
+        <div id="notification" class="notification">Đã xóa sản phẩm</div>
+        <div class="cart-total">
+            <a href="sanpham_nike_logged_in.html">
+                <button id="return">Tiếp tục mua sắm</button>
+            </a>
+        </div>
+    <!--123-->
+    <!-- Checkout Section Begin -->
+    <section class="checkout spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!--h6 class="coupon__link"><span class="icon_tag_alt"></span> <a href="#">Have a coupon?</a> Click
+                    here to enter your code.</h6>-->
+                </div>
+            </div>
+            <form action="#" class="checkout__form">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h5>Billing detail</h5>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="checkout__form__input">
+                                    <p>Tên<span>*</span></p>
+                                    <input type="text" value=" Anh Sang Quan" >
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="checkout__form__input">
+                                    <p>Họ <span>*</span></p>
+                                    <input type="text" value="Linh" >
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="checkout__form__input">
+                                    <p>Nước <span>*</span></p>
+                                    <input type="text" value="Việt Nam" >
+                                </div>
+                                <div class="checkout__form__input">
+                                    <p>Địa chỉ <span>*</span></p>
+                                    <input type="text" value="224 Nguyễn Thị Minh Khai, Phường 6, Quận 3, TP. Hồ Chí Minh, Việt Nam." placeholder="Địa chỉ nhà " >
+                                    <p>Địa chỉ căn hộ/chung cư...(Nếu có)<span>*</span></p>
+                                    <input type="text" value="88 Đường Nguyễn Cơ Thạch, Quận 2, TP. Hồ Chí Minh." placeholder="Địa chỉ căn hộ/chung cư...(Nếu có)" >
+                                </div>
+                                <div class="checkout__form__input">
+                                    <p>Tỉnh/Thành phố <span>*</span></p>
+                                    <input type="text" value="TP. Hồ Chí Minh" >
+                                </div>
+                                <div class="checkout__form__input">
+                                    <p>Quận/Huyện <span>*</span></p>
+                                    <input type="text" value="Quận 3" >
+                                </div>
+                                <div class="checkout__form__input">
+                                    <p>Mã bưu chính<span>*</span></p>
+                                    <input type="text" value="10001" >
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="checkout__form__input">
+                                    <p>Số Điện Thoại  <span>*</span></p>
+                                    <input type="text" value="123-456-7890" >
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="checkout__form__input">
+                                    <p>Email <span>*</span></p>
+                                    <input type="text" value="john.doe@example.com" >
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-12">
+                                <div class="checkout__form__input">
+                                    <p>Ghi chú đặt hàng <span>*</span></p>
+                                    <input type="text"
+                                    placeholder="Lưu ý về đơn đặt hàng của bạn, ví dụ: thông báo đặc biệt khi giao hàng">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="checkout__order">
+                                <h5>Đơn của bạn </h5>
+                                <div class="checkout__order__product">
+                                    <ul>
+                                        <li>
+                                            <span class="top__text">Product</span>
+                                            <span class="top__text__right">Total</span>
+                                        </li>
+                                            <li>01. Nike Air Max 270 <span>2.000.000VND</span></li>
+                                            <li>02. Nike Air Force 1 <span>2.000.000VND</span></li>
+                                            <li>03. Nike React Infinity Run <span>2.000.000VND</span></li>
+                                            <li>04. Nike ZoomX Vaporfly NEXT% <span>2.000.000VND</span></li>
+                                    </ul>
+                                </div>
+                                <div class="checkout__order__total">
+                                    <ul>
+                                        <li>Tổng phụ<span>8.000.000VND</span></li>
+                                        <li>Tổng <span>8.000.000VND</span></li>
+                                    </ul>
+                                </div>
+                                <div class="checkout__order__widget">
+                                    
+                                    <label for="check-payment">
+                                        Thanh toán khi nhận hàng 
+                                        <input type="checkbox" id="check-payment" name="payment" onclick="selectOnly(this)">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label for="paypal">
+                                        Chuyển khoản
+                                        <input type="checkbox" id="paypal" name="payment" onclick="selectOnly(this)">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label for="card">
+                                        Thanh toán bằng thẻ 
+                                        <input type="checkbox" id="card" name="payment" onclick="selectOnly(this)">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    
+                                    <script>
+                                        function selectOnly(selectedCheckbox) {
+                                            const checkboxes = document.querySelectorAll('input[name="payment"]');
+                                            checkboxes.forEach(checkbox => {
+                                                if (checkbox !== selectedCheckbox) {
+                                                    checkbox.checked = false;
+                                                }
+                                            });
+                                        }
+                                    </script>
+                                    
+                                    <div class="card-info" id="card-info">
+                                        <div class="form-group">
+                                            <label for="card-name">Tên trên thẻ:</label>
+                                            <input type="text" id="card-name" placeholder="Nhập tên trên thẻ" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="card-number">Số thẻ:</label>
+                                            <input type="text" id="card-number" placeholder="Nhập số thẻ" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="card-expiry">Ngày hết hạn (MM/YY):</label>
+                                            <input type="text" id="card-expiry" placeholder="MM/YY" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="card-cvv">CVV:</label>
+                                            <input type="text" id="card-cvv" placeholder="Nhập CVV" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <td> 
+                                    <button onclick="dathang()" class="site-btn">Đặt hàng</button>
+                                    <script>function dathang(){alert("Đã đặt hàng thành công")}</script>
+                                </td>
+                                <!---->
+                                <script>
+                                    // Hiển thị/Ẩn bảng thông tin thẻ khi checkbox được chọn/bỏ chọn
+                                    const cardCheckbox = document.getElementById('card');
+                                    const cardInfo = document.getElementById('card-info');
+                            
+                                    cardCheckbox.addEventListener('change', function () {
+                                        if (this.checked) {
+                                            cardInfo.style.display = 'block';
+                                        } else {
+                                            cardInfo.style.display = 'none';
+                                        }
+                                    });
+                            
+                                    
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+        </section>
+        <!-- Checkout Section End -->
+
+        <!-- Instagram Begin -->
+        <div class="instagram">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                        <div class="instagram__item set-bg" data-setbg="img/instagram/insta-1.jpg">
+                            <div class="instagram__text">
+                                <i class="fa fa-instagram"></i>
+                                <a href="#">@ ashion_shop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                        <div class="instagram__item set-bg" data-setbg="img/instagram/insta-2.jpg">
+                            <div class="instagram__text">
+                                <i class="fa fa-instagram"></i>
+                                <a href="#">@ ashion_shop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                        <div class="instagram__item set-bg" data-setbg="img/instagram/insta-3.jpg">
+                            <div class="instagram__text">
+                                <i class="fa fa-instagram"></i>
+                                <a href="#">@ ashion_shop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                        <div class="instagram__item set-bg" data-setbg="img/instagram/insta-4.jpg">
+                            <div class="instagram__text">
+                                <i class="fa fa-instagram"></i>
+                                <a href="#">@ ashion_shop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                        <div class="instagram__item set-bg" data-setbg="img/instagram/insta-5.jpg">
+                            <div class="instagram__text">
+                                <i class="fa fa-instagram"></i>
+                                <a href="#">@ ashion_shop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                        <div class="instagram__item set-bg" data-setbg="img/instagram/insta-6.jpg">
+                            <div class="instagram__text">
+                                <i class="fa fa-instagram"></i>
+                                <a href="#">@ ashion_shop</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Instagram End -->
+
+        <!-- Footer Section Begin -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-7">
+                        <div class="footer__about">
+                            <div class="footer__logo">
+                                <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                            </div>
+                            <p>Trang web bán giày chuyên cung cấp các mẫu giày thời trang, đa dạng từ thể thao đến công sở. Sản phẩm đảm bảo chất lượng cao, với nhiều lựa chọn về kiểu dáng và kích cỡ phù hợp cho mọi lứa tuổi.</p>
+                            <div class="footer__payment">
+                                <a href="#"><img src="img/payment/payment-1.png" alt=""></a>
+                                <a href="#"><img src="img/payment/payment-2.png" alt=""></a>
+                                <a href="#"><img src="img/payment/payment-3.png" alt=""></a>
+                                <a href="#"><img src="img/payment/payment-4.png" alt=""></a>
+                                <a href="#"><img src="img/payment/payment-5.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-5">
+                        <div class="footer__widget">
+                            <h6>Đường dẫn</h6>
+                            <ul>
+                                <li><a href="#">Về chúng tôi</a></li>
+                                <li><a href="#">Thông tin liên lạc</a></li>
+                                <li><a href="#">Hỏi đáp cùng Ashion</a></li>
+                                <li><a href="#">Blogs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                        <div class="footer__widget">
+                            <h6>Tài khoản</h6>
+                            <ul>
+                                <li><a href="#">Tài khoản của tôi</a></li>
+                                <li><a href="#">Theo dõi đơn hàng</a></li>
+                                <li><a href="#">Thanh toán</a></li>
+                                <li><a href="#">Danh sách yêu thích</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-8 col-sm-8">
+                        <div class="footer__newslatter">
+                            <h6>Tạp chí Ashion</h6>
+                            <form action="#">
+                                <input type="text" placeholder="Email">
+                                <button type="submit" class="site-btn">Theo dõi</button>
+                            </form>
+                            <div class="footer__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <div class="footer__copyright__text">
+                            <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                        </div>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section End -->
+
+        <!-- Search Begin -->
+        <div class="search-model">
+            <div class="h-100 d-flex align-items-center justify-content-center">
+                <div class="search-close-switch">+</div>
+                <form class="search-model-form">
+                    <input type="text" id="search-input" placeholder="Search here.....">
+                </form>
+            </div>
+        </div>
+        <!-- Search End -->
+
+        <!-- Js Plugins -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/mixitup.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+        <script src="js/jquery.slicknav.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.nicescroll.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+    </html>
