@@ -116,6 +116,29 @@
         </div>
     </header>
     <!-- Header Section End -->
+<!-- Lọc time admin -->
+    <div class="container mt-5">
+    <h3 class="text-center">Lọc thời gian thống kê</h3>
+    </br>
+    <div class="time-filter mb-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="timeFilterForm" class="d-flex justify-content-center gap-3">
+                    <select class="form-select w-auto" id="timeRange" name="timeRange">
+                        <option value="quarter">Theo quý</option>
+                        <option value="month">Theo tháng</option>
+                        <option value="year">Theo năm</option>
+                    </select>
+                    <select class="form-select w-auto" id="specificTime" name="specificTime">
+                        <!-- Options sẽ được cập nhật động bằng JavaScript -->
+                    </select>
+                    <button type="submit" class="btn btn-primary">Lọc</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+     <!-- Lọc time admin end -->
 
     <!-- =========================Thống kê Khách Hàng ========================-->
     <div class="container mt-5">
@@ -492,6 +515,110 @@
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
+
+        // Hàm khởi tạo options cho select thời gian
+function updateTimeOptions() {
+    const timeRange = document.getElementById('timeRange').value;
+    const specificTime = document.getElementById('specificTime');
+    specificTime.innerHTML = ''; // Xóa options cũ
+    
+    const currentYear = new Date().getFullYear();
+    
+    if (timeRange === 'quarter') {
+        for (let i = 1; i <= 4; i++) {
+            const option = document.createElement('option');
+            option.value = `Q${i}-${currentYear}`;
+            option.text = `Quý ${i} ${currentYear}`;
+            specificTime.appendChild(option);
+        }
+    } else if (timeRange === 'month') {
+        for (let i = 1; i <= 12; i++) {
+            const option = document.createElement('option');
+            option.value = `${i}-${currentYear}`;
+            option.text = `Tháng ${i} ${currentYear}`;
+            specificTime.appendChild(option);
+        }
+    } else if (timeRange === 'year') {
+        for (let i = currentYear; i >= currentYear - 5; i--) {
+            const option = document.createElement('option');
+            option.value = `${i}`;
+            option.text = `Năm ${i}`;
+            specificTime.appendChild(option);
+        }
+    }
+}
+
+// Xử lý khi thay đổi loại thời gian
+document.getElementById('timeRange').addEventListener('change', updateTimeOptions);
+
+// Xử lý form submit
+document.getElementById('timeFilterForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const timeRange = document.getElementById('timeRange').value;
+    const specificTime = document.getElementById('specificTime').value;
+    
+    // Giả lập dữ liệu mới dựa trên bộ lọc
+    const filteredData = filterCustomerData(timeRange, specificTime);
+    updateCustomerChart(filteredData);
+    updateCustomerTable(filteredData);
+});
+
+// Hàm giả lập lọc dữ liệu (thay bằng API thật trong thực tế)
+function filterCustomerData(timeRange, specificTime) {
+    // Đây là dữ liệu mẫu, trong thực tế nên lấy từ API
+    let filteredData = [
+        { name: "Nguyễn Văn A", revenue: 5000000 },
+        { name: "Trần Thị B", revenue: 4000000 },
+        { name: "Phạm Văn C", revenue: 4000000 },
+        { name: "Lê Thị D", revenue: 2000000 },
+        { name: "Hoàng Văn E", revenue: 1000000 }
+    ];
+    
+    // Logic lọc theo thời gian có thể được thêm ở đây
+    return filteredData;
+}
+
+// Cập nhật biểu đồ
+function updateCustomerChart(data) {
+    customerChart.data.labels = data.map(customer => customer.name);
+    customerChart.data.datasets[0].data = data.map(customer => customer.revenue);
+    customerChart.update();
+}
+
+// Cập nhật bảng
+function updateCustomerTable(data) {
+    const tbody = document.getElementById('customerTable');
+    tbody.innerHTML = '';
+    
+    data.forEach(customer => {
+        const row = `
+            <tr>
+                <td>
+                    <div class="dashboard-chart">
+                        <p>${customer.name}</p><a href="donhangchuasp.html">(Xem đơn hàng)</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="dashboard-chart">
+                        <p>${customer.revenue.toLocaleString()}</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="dashboard-chart">
+                        <p>Đã mua ${customer.revenue.toLocaleString()}</p>
+                    </div>
+                </td>
+            </tr>
+        `;
+        tbody.innerHTML += row;
+    });
+}
+
+// Khởi tạo options ban đầu
+updateTimeOptions();
+
+// Lưu chart instance để cập nhật sau
+let customerChart;
 
         const canvasOptions = {
             maintainAspectRatio: false, // Disable automatic resizing
