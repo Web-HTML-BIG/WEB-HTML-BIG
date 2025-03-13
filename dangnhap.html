@@ -4,72 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập và Đăng ký</title>
-    <link rel="stylesheet" href="css\dangnhap.css">
+    <link rel="stylesheet" href="css/dangnhap.css" >
 </head>
 <body>
-    <div class="container">
-        <!-- Biểu mẫu Đăng nhập -->
-        <form id="login-form" class="form" onsubmit="xuLyDangNhap(event)">
+    <div class="container" onload="clearForm()">
+        <!-- Biểu mẫu Đăng nhập  -->
+        <form id="login-form" class="form" action="xulydangnhap.php" method="post" autocomplete="off">
             <h2>Đăng nhập</h2>
-            <input type="text" id="login-username" name="username" placeholder="Tên đăng nhập">
-            <input type="password" name="password" placeholder="Mật khẩu">
-            <button type="submit">Đăng nhập</button>
-            <p>Bạn chưa có tài khoản? <a href="#" onclick="hienThiDangKy()">Đăng ký tại đây</a></p>
+            <input type="text" id="login-username" name="username" placeholder="Tên đăng nhập" autocomplete="on">
+            <input type="password" name="password" placeholder="Mật khẩu" autocomplete="off">
+            <button name="login" type="submit" >Đăng nhập</button>
+            <p>Bạn chưa có tài khoản? <a href="dangki.html">Đăng ký tại đây</a></p>
         </form>
 
-        <!-- Biểu mẫu Đăng ký -->
-        <form id="register-form" class="form" onsubmit="xuLyDangKy(event)">
-            <h2>Đăng ký</h2>
-            <input type="text" id="register-username" name="username" placeholder="Tên đăng nhập">
-            <input type="password" name="password" placeholder="Mật khẩu">
-            <input type="password" name="confirm_password" placeholder="Nhập lại mật khẩu">
-            <input type="email" name="email" placeholder="Email">
-            
-            <!-- Lựa chọn Giới tính -->
-            <label for="gender">Giới tính:</label>
-            <div class="gender-selection">
-                <label><input type="radio" name="gender" value="Nam"> Nam</label>
-                <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
-            </div>
-
-            <input type="text" name="address" placeholder="Địa chỉ">
-            <button type="submit">Đăng ký</button>
-            <p>Bạn đã có tài khoản? <a href="#" onclick="hienThiDangNhap()">Đăng nhập tại đây</a></p>
-        </form>
     </div>
 
-    <script>
-        const loginForm = document.getElementById("login-form");
-        const registerForm = document.getElementById("register-form");
-
-        function hienThiDangNhap() {
-            loginForm.style.display = "block";
-            registerForm.style.display = "none";
-        }
-
-        function hienThiDangKy() {
-            loginForm.style.display = "none";
-            registerForm.style.display = "block";
-        }
-
-        // Hiển thị biểu mẫu đăng nhập mặc định
-        hienThiDangNhap();
-
-        // Xử lý khi gửi biểu mẫu đăng nhập
-        function xuLyDangNhap(event) {
-            event.preventDefault();
-            const tenDangNhap = document.getElementById("login-username").value;
-            localStorage.setItem("username", tenDangNhap); // Lưu tên đăng nhập vào localStorage
-            window.location.href = "index_logged_in.html"; // Chuyển đến trang chủ
-        }
-
-        // Xử lý khi gửi biểu mẫu đăng ký
-        function xuLyDangKy(event) {
-            event.preventDefault();
-            const tenDangNhap = document.getElementById("register-username").value;
-            localStorage.setItem("username", tenDangNhap); // Lưu tên đăng nhập vào localStorage
-            window.location.href = "index_logged_in.html"; // Chuyển đến trang chủ
-        }
-    </script>
+   
 </body>
 </html>
