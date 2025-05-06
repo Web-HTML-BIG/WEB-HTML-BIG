@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['IDKH']))
-    header('location: dangnhap.html');
+    header('location: /web2/dangnhap.html');
 $idkh = $_SESSION['IDKH'];
 
 $conn = new mysqli('localhost','root','','web_db');
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = $_POST['address'];
     $phone_number = $_POST['phone_number'];
 
-    $sql = "UPDATE kh SET NAME='$fullname', DC='$address'";
+    $sql = "UPDATE kh SET NAME='$fullname', DC='$address', SDT='$phone_number'";
     if(!$password && $confirm_password){
         echo "<script type='text/javascript'>alert('Vui lòng nhập mật khẩu mới'); window.location.href='chinhsuatt.php';</script>";
     }
@@ -51,6 +51,11 @@ $conn->close();
     <title>Chỉnh sửa thông tin</title>
     <link rel="stylesheet" href="css/chinhsuatt.css">
 </head>
+<div style="position: absolute; top: 10px;left: 10px;background-color: none;">
+    <button class="quaylai" onclick="history.back()" title="Quay lại">
+        <img src="\web2\img\return.svg"></img>
+    </button>
+</div>
 <body>
     <div class="container">
         <h2>Chỉnh sửa thông tin cá nhân</h2>
@@ -81,8 +86,7 @@ $conn->close();
                 <textarea id="address" name="address" rows="3" ><?php echo $userData['DC']; ?></textarea>
             </div>
 
-         
-            <button type="submit"  >Lưu thông tin</button>
+            <button type="submit">Lưu thông tin</button>
         </form>
     </div>
 </body>
